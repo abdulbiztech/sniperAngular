@@ -1,0 +1,19 @@
+<div class="dashboard">
+  <div class="status">
+    <h2>Bot Status</h2>
+    <p>Status: {{ botStatus }}</p>
+  </div>
+  <div class="open-positions">
+    <h2>Open Positions</h2>
+    <ul>
+      <li *ngFor="let position of openPositions">
+        {{ position.asset }} - Entry Price: {{ position.entryPrice }} | Current
+        Price: {{ position.currentPrice }} | P/L: {{ position.profitLoss }}
+      </li>
+    </ul>
+  </div>
+  <div class="market-data">
+    <h2>Market Data</h2>
+    <canvas #chartCanvas></canvas>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="market-data">
+  <h2>Market Data</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Timestamp</th>
+        <th>Price</th>
+        <th>Volume</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of marketData">
+        <td>{{ data.timestamp | date : "medium" }}</td>
+        <td>{{ data.price | currency }}</td>
+        <td>{{ data.volume }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
